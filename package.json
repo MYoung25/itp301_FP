@@ -1,0 +1,14 @@
+{
+  "name": "301fp",
+  "version": "1.0.0",
+  "description": "Final Project for ITP301",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack"
+  },
+  "author": "Michael Young",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.12.14"
+  }
+}
