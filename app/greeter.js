@@ -1,14 +1,17 @@
-import React, {Component} from 'react';
-import config from './config.json';
+import React, {Component} from 'react'
+import {render} from 'react-dom'
+import config from './config.json'
+import {Router, Route, IndexRoute, hashHistory} from 'react-router'
 
-class Greeter extends Component{
-	render(){
-		return(
-			<div>
-				{config.greetText}
-			</div>
-		);
-	}
-}
+import Nav from './pages/Nav'
+import HomePage from './pages/HomePage'
 
-export default Greeter;
+
+render((
+		<Router history={hashHistory}>
+			<Route path='/' component = {Nav}>
+				<IndexRoute component={HomePage}/>
+			</Route>
+		</Router>
+	), document.getElementById('root'));
+
