@@ -4,10 +4,13 @@
   "description": "Final Project for ITP301",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress"
+    "start": "webpack-dev-server --progress",
+    "build": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress"  
   },
+  
   "author": "Michael Young",
   "license": "ISC",
+
   "devDependencies": {
     "babel-core": "^6.7.6",
     "babel-loader": "^6.2.4",
@@ -21,8 +24,10 @@
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   },
+
   "dependencies": {
     "react": "^15.0.1",
     "react-dom": "^15.0.1"
   }
+
 }
