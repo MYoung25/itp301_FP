@@ -18,7 +18,7 @@ class Weather extends Component{
 				<div className="wunderground-api">
 					Powered By:
 					<a href="https://www.wunderground.com/?apiref=ab14412e93633ca7">
-						<img src={"../assets/wunderground_logo.png"} className="wunderground_logo" alt="Weather Underground"/>
+						<img src={"assets/wunderground_logo.png"} className="wunderground_logo" alt="Weather Underground"/>
 					</a>
 				</div>
 			</div>

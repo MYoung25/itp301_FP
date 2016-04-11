@@ -12,7 +12,7 @@ class Nav extends Component{
 		);
 	}
 	LoadBackground(){
-		document.querySelector('body').style.background = "url('../assets/background.jpg') fixed";
+		document.querySelector('body').style.background = "url('assets/background.jpg') fixed";
 		document.querySelector('body').style.backgroundSize = "200vh";
 	}
 }
