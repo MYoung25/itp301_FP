@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
-import config from './config.json'
-import {Router, Route, IndexRoute, hashHistory} from 'react-router'
+import {Router, Route, IndexRoute, hashHistory, browserHistory} from 'react-router'
 
 import './main.css';
 
@@ -14,4 +13,4 @@ render((
 				<IndexRoute component={HomePage}/>
 			</Route>
 		</Router>
-	), document.getElementById('root'));	
+	), document.getElementById('root'));

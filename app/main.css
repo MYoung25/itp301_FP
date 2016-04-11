@@ -11,10 +11,110 @@ html {
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: blue;
+  color: #FFF;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul {
   margin: 0;
   padding: 0;
 }
+
+/**********************************************************************
+*
+*  						NAVIGATION
+*
+**********************************************************************/
+
+.nav-link-home {
+	text-align: left;
+}
+
+.nav-link-settings {
+	text-align: right;
+}
+
+/**********************************************************************
+*
+*  						WEATHER MODULE
+*
+what I still need to implement:
+current weather icons from https://www.wunderground.com/weather/api/d/docs?d=resources/icon-sets&MR=1 
+
+**********************************************************************/
+
+.weather-module {
+	width: 300px;
+	background: rgba(0,0,0,0.5);
+	color: #ccc;
+}
+
+.weather-location{
+	font-size: 1.5em;
+}
+
+.temperature {
+	text-align: center;
+}
+
+.current-temperature {
+	font-size: 2.5em;
+	color: #FFF;
+}
+
+.wunderground-api {
+	margin: auto;
+	text-align: center;
+}
+
+.wunderground_logo {
+	clear: both;
+	width: 107px;
+}
+
+
+/**********************************************************************
+*
+*  						NAVIGATION
+*
+**********************************************************************/
+
+
+/**********************************************************************
+*
+*  						NAVIGATION
+*
+**********************************************************************/
+
+
+
+/**********************************************************************
+*
+*  						NAVIGATION
+*
+**********************************************************************/
+
+
+
+/**********************************************************************
+*
+*  						NAVIGATION
+*
+**********************************************************************/
+
+
+/**********************************************************************
+*
+*  						SETTINGS
+*
+**********************************************************************/
+
+/*
+* 						Background
+*/
+
+.changeBackground {
+	background: rgba(0,0,0,0.5);
+	width: 50%;
+	float: right;
+}
+
