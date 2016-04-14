@@ -7,8 +7,7 @@ class HomePage extends Component{
 	render() {
 		return (
 			<div >
-			<Background />
-			<Weather />
+				<Weather />
 			</div>
 		);
 	}

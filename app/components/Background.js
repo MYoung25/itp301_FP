@@ -23,14 +23,14 @@ class Background extends Component{
 	}
 	uploadImageJquery(){
 		$(function () {
-    	$(".upload").change(function () {
-        if (this.files && this.files[0]) {
-            var reader = new FileReader();
-            reader.onload = imageIsLoaded;
-            reader.readAsDataURL(this.files[0]);
-        }
-    });
-	});
+    		$(".upload").change(function () {
+        		if (this.files && this.files[0]) {
+            	var reader = new FileReader();
+           		reader.onload = imageIsLoaded;
+           		reader.readAsDataURL(this.files[0]);
+        		}
+    		});
+		});
 
 		function imageIsLoaded(e) {
     	document.querySelector('body').style.background = "url('" + e.target.result + "') fixed";

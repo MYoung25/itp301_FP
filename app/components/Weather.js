@@ -16,7 +16,6 @@ class Weather extends Component{
 					<span className="current-weather"></span>
 				</div>
 				<div className="wunderground-api">
-					Powered By:
 					<a href="https://www.wunderground.com/?apiref=ab14412e93633ca7">
 						<img src={"assets/wunderground_logo.png"} className="wunderground_logo" alt="Weather Underground"/>
 					</a>
@@ -38,7 +37,7 @@ class Weather extends Component{
 		  		document.querySelector('.weather-location').innerHTML = location;
 		  		document.querySelector('.current-temperature').innerHTML = temp_f + "&deg;";
 		  		document.querySelector('.current-weather').innerHTML = weather;
-		  		document.querySelector('.current-weather-icon').src="http://icons.wxug.com/i/c/i/" + icon + ".gif";
+		  		document.querySelector('.current-weather-icon').src="http://icons.wxug.com/i/c/k/" + icon + ".gif";
 			}
 		});
 	}

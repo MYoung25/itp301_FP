@@ -4,9 +4,9 @@ import { Link } from 'react-router'
 class Nav extends Component{
 	render() {
 		return (
-			<div class="nav"onLoad={this.LoadBackground}>
-				<span className="nav-link-home"><Link to="/">Home</Link></span>
-				<Link to="/settings" className="nav-link-settings">Settings</Link>
+			<div className="nav" onLoad={this.LoadBackground}>
+				<Link to="/"><img src="./assets/home.png" alt="Home" className="nav-img nav-link-home"/></Link>
+				<Link to="/settings"><img src="./assets/settings.png" alt="Settings" className="nav-img nav-link-settings"/></Link>
 			{this.props.children}
 			</div>
 		);

@@ -25,27 +25,36 @@ h1, h2, h3, h4, h5, h6, p, ul {
 *
 **********************************************************************/
 
+.nav{
+}
+
+.nav-img {
+	width: 35px;
+	background-color: rgba(0,0,0,0.5);
+}
+
 .nav-link-home {
-	text-align: left;
+	position: absolute;
+	top: 0px;
+	right:0px;
+	padding-bottom: 15px;
 }
 
 .nav-link-settings {
-	text-align: right;
+	position:absolute;
+	top: 50px;
+	right: 0px;
 }
 
 /**********************************************************************
 *
 *  						WEATHER MODULE
 *
-what I still need to implement:
-current weather icons from https://www.wunderground.com/weather/api/d/docs?d=resources/icon-sets&MR=1 
-
 **********************************************************************/
 
 .weather-module {
 	width: 300px;
 	background: rgba(0,0,0,0.5);
-	color: #ccc;
 }
 
 .weather-location{
@@ -109,12 +118,13 @@ current weather icons from https://www.wunderground.com/weather/api/d/docs?d=res
 **********************************************************************/
 
 /*
-* 						Background
+* 						Change Background
 */
 
 .changeBackground {
 	background: rgba(0,0,0,0.5);
+	margin: auto;
+	text-align: center;
 	width: 50%;
-	float: right;
 }
 
