@@ -1,12 +1,15 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router'
-import Background from '../components/Background.js'
+import Background from './Background.js'
+import WeatherType from './Settings/WeatherType'
 
 class Settings extends Component {
 	render(){
 		return(
-			<div>
+			<div className="settings">
+				<h2>Settings</h2>
 				<Background />
+				<WeatherType />
 			</div>
 		);
 	}

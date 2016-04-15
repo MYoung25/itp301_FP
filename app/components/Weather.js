@@ -11,7 +11,7 @@ class Weather extends Component{
 			<div className="weather-module">
 				<div className="temperature">
 					<span className="weather-location"></span><br/>
-					<span className="current-temperature" onpageload={this.getWeatherData()}></span>F<br/>
+					<span className="current-temperature"></span><br/>
 					<img className="current-weather-icon" /><br/>
 					<span className="current-weather"></span>
 				</div>
@@ -23,26 +23,6 @@ class Weather extends Component{
 			</div>
 		);
 	}
-
-	getWeatherData(){
-		$.ajax({
-  			url : "http://api.wunderground.com/api/e82b459c85a499a5/geolookup/conditions/q/CA/Los_Angeles.json",
-		  	dataType : "jsonp",
-		  	success : function(parsed_json) {
-			  	var location = parsed_json['location']['city'];
-		  		var temp_f = parsed_json['current_observation']['temp_f'];
-		  		var icon = parsed_json['current_observation']['icon'];
-		  		var weather = parsed_json['current_observation']['weather'];
-
-		  		document.querySelector('.weather-location').innerHTML = location;
-		  		document.querySelector('.current-temperature').innerHTML = temp_f + "&deg;";
-		  		document.querySelector('.current-weather').innerHTML = weather;
-		  		document.querySelector('.current-weather-icon').src="http://icons.wxug.com/i/c/k/" + icon + ".gif";
-			}
-		});
-	}
-
-
 }
 
 export default Weather;

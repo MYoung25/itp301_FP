@@ -5,8 +5,7 @@ class Nav extends Component{
 	render() {
 		return (
 			<div className="nav" onLoad={this.LoadBackground}>
-				<Link to="/"><img src="./assets/home.png" alt="Home" className="nav-img nav-link-home"/></Link>
-				<Link to="/settings"><img src="./assets/settings.png" alt="Settings" className="nav-img nav-link-settings"/></Link>
+				<img src="./assets/settings.png" alt="Settings" className="nav-img nav-link-settings" onClick={this.openSettings}/>
 			{this.props.children}
 			</div>
 		);
@@ -15,6 +14,14 @@ class Nav extends Component{
 		document.querySelector('body').style.background = "url('assets/background.jpg') fixed";
 		document.querySelector('body').style.backgroundSize = "200vh";
 	}
+	openSettings(){
+		if (document.querySelector('.settings').style.display == "block"){
+			document.querySelector('.settings').style.display = "none";
+		} else {
+			document.querySelector('.settings').style.display = "block";
+		}
+	}
+
 }
 
 export default Nav;
