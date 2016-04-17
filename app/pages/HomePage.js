@@ -7,12 +7,22 @@ import Settings from '../components/Settings'
 
 
 class HomePage extends Component{
+	getInitalState() {
+		return {
+			"degreeString": "0 deg F"
+		};
+	}
+	didChangeDegreeType(value) {
+		this.setState({
+			"degreeString": value
+		});
+	}
 	render() {
 		return (
 			<div>
-				<Settings />
+				<Settings didChangeDegreeType={this.didChangeDegreeType}/>
 
-				<Weather />
+				<Weather degreeString={this.state.degreeString}/>
 			</div>
 		);
 	}

@@ -9,7 +9,7 @@ class Settings extends Component {
 			<div className="settings">
 				<h2>Settings</h2>
 				<Background />
-				<WeatherType />
+				<WeatherType didChangeDegreeType={this.props.didChangeDegreeType} />
 			</div>
 		);
 	}

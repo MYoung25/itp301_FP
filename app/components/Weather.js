@@ -11,7 +11,7 @@ class Weather extends Component{
 			<div className="weather-module">
 				<div className="temperature">
 					<span className="weather-location"></span><br/>
-					<span className="current-temperature"></span><br/>
+					<span className="current-temperature">{this.props.degreeString}</span><br/>
 					<img className="current-weather-icon" /><br/>
 					<span className="current-weather"></span>
 				</div>
