@@ -25129,7 +25129,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n  box-sizing: border-box;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n}\n\n*, *:before, *:after {\n  box-sizing: inherit;\n}\n\nbody {\n  margin: 0;\n  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #FFF;\n}\n\nh1, h2, h3, h4, h5, h6, p, ul {\n  margin: 0;\n  padding: 0;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n.nav-link-home {\n\ttext-align: left;\n}\n\n.nav-link-settings {\n\ttext-align: right;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tWEATHER MODULE\n*\nwhat I still need to implement:\ncurrent weather icons from https://www.wunderground.com/weather/api/d/docs?d=resources/icon-sets&MR=1 \n\n**********************************************************************/\n\n.weather-module {\n\twidth: 300px;\n\tbackground: rgba(0,0,0,0.5);\n\tcolor: #ccc;\n}\n\n.weather-location{\n\tfont-size: 1.5em;\n}\n\n.temperature {\n\ttext-align: center;\n}\n\n.current-temperature {\n\tfont-size: 2.5em;\n\tcolor: #FFF;\n}\n\n.wunderground-api {\n\tmargin: auto;\n\ttext-align: center;\n}\n\n.wunderground_logo {\n\tclear: both;\n\twidth: 107px;\n}\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tSETTINGS\n*\n**********************************************************************/\n\n/*\n* \t\t\t\t\t\tBackground\n*/\n\n.changeBackground {\n\tbackground: rgba(0,0,0,0.5);\n\twidth: 50%;\n\tfloat: right;\n}\n\n", ""]);
+	exports.push([module.id, "html {\n  box-sizing: border-box;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n}\n\n*, *:before, *:after {\n  box-sizing: inherit;\n}\n\nbody {\n  margin: 0;\n  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #FFF;\n}\n\nh1, h2, h3, h4, h5, h6, p, ul {\n  margin: 0;\n  padding: 0;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n.nav{\n}\n\n.nav-img {\n\twidth: 35px;\n\tbackground-color: rgba(0,0,0,0.5);\n}\n\n.nav-link-home {\n\tposition: absolute;\n\ttop: 0px;\n\tright:0px;\n\tpadding-bottom: 15px;\n}\n\n.nav-link-settings {\n\tposition:absolute;\n\ttop: 0px;\n\tright: 0px;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tWEATHER MODULE\n*\n**********************************************************************/\n\n.weather-module {\n\twidth: 300px;\n\tbackground: rgba(0,0,0,0.5);\n}\n\n.weather-location{\n\tfont-size: 1.5em;\n}\n\n.temperature {\n\ttext-align: center;\n}\n\n.current-temperature {\n\tfont-size: 2.5em;\n\tcolor: #FFF;\n}\n\n.wunderground-api {\n\tmargin: auto;\n\ttext-align: center;\n}\n\n.wunderground_logo {\n\tclear: both;\n\twidth: 107px;\n}\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tSETTINGS\n*\n**********************************************************************/\n\n.settings {\n\tbackground: rgba(0,0,0,0.5);\n\tposition: absolute;\n\ttop: 0px;\n\tright: 35px;\n\twidth: 600px;\n\ttext-align: center;\n\tdisplay:none;\n}\n\n/*\n* \t\t\t\t\t\tChange Background\n*/\n\n.changeBackground {\n\ttext-align: center;\n}\n\n", ""]);
 
 	// exports
 
@@ -25482,21 +25482,8 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					{ 'class': 'nav', onLoad: this.LoadBackground },
-					_react2.default.createElement(
-						'span',
-						{ className: 'nav-link-home' },
-						_react2.default.createElement(
-							_reactRouter.Link,
-							{ to: '/' },
-							'Home'
-						)
-					),
-					_react2.default.createElement(
-						_reactRouter.Link,
-						{ to: '/settings', className: 'nav-link-settings' },
-						'Settings'
-					),
+					{ className: 'nav', onLoad: this.LoadBackground },
+					_react2.default.createElement('img', { src: './assets/settings.png', alt: 'Settings', className: 'nav-img nav-link-settings', onClick: this.openSettings }),
 					this.props.children
 				);
 			}
@@ -25505,6 +25492,15 @@
 			value: function LoadBackground() {
 				document.querySelector('body').style.background = "url('assets/background.jpg') fixed";
 				document.querySelector('body').style.backgroundSize = "200vh";
+			}
+		}, {
+			key: 'openSettings',
+			value: function openSettings() {
+				if (document.querySelector('.settings').style.display == "block") {
+					document.querySelector('.settings').style.display = "none";
+				} else {
+					document.querySelector('.settings').style.display = "block";
+				}
 			}
 		}]);
 
@@ -25531,13 +25527,13 @@
 
 	var _reactRouter = __webpack_require__(166);
 
-	var _Background = __webpack_require__(229);
-
-	var _Background2 = _interopRequireDefault(_Background);
-
-	var _Weather = __webpack_require__(231);
+	var _Weather = __webpack_require__(229);
 
 	var _Weather2 = _interopRequireDefault(_Weather);
+
+	var _Settings = __webpack_require__(231);
+
+	var _Settings2 = _interopRequireDefault(_Settings);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25562,7 +25558,7 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(_Background2.default, null),
+					_react2.default.createElement(_Settings2.default, null),
 					_react2.default.createElement(_Weather2.default, null)
 				);
 			}
@@ -25608,57 +25604,49 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Background = function (_Component) {
-		_inherits(Background, _Component);
+	var Weather = function (_Component) {
+		_inherits(Weather, _Component);
 
-		function Background(props) {
-			_classCallCheck(this, Background);
+		function Weather(props) {
+			_classCallCheck(this, Weather);
 
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(Background).call(this, props));
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Weather).call(this, props));
 		}
 
-		_createClass(Background, [{
+		_createClass(Weather, [{
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					{ className: 'changeBackground' },
-					'Choose a File to make your background',
-					_react2.default.createElement('br', null),
-					_react2.default.createElement('input', { type: 'file', name: 'ImageToUpload', className: 'upload', onClick: this.uploadImageJquery })
+					{ className: 'weather-module' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'temperature' },
+						_react2.default.createElement('span', { className: 'weather-location' }),
+						_react2.default.createElement('br', null),
+						_react2.default.createElement('span', { className: 'current-temperature' }),
+						_react2.default.createElement('br', null),
+						_react2.default.createElement('img', { className: 'current-weather-icon' }),
+						_react2.default.createElement('br', null),
+						_react2.default.createElement('span', { className: 'current-weather' })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'wunderground-api' },
+						_react2.default.createElement(
+							'a',
+							{ href: 'https://www.wunderground.com/?apiref=ab14412e93633ca7' },
+							_react2.default.createElement('img', { src: "assets/wunderground_logo.png", className: 'wunderground_logo', alt: 'Weather Underground' })
+						)
+					)
 				);
-			}
-		}, {
-			key: 'uploadImage',
-			value: function uploadImage() {
-				console.log('upload image form works');
-				var upload = document.querySelector('.upload').value;
-				console.log(upload);
-				// document.querySelector('body').style.background = "url(" + upload + ") no-repeat fixed";
-			}
-		}, {
-			key: 'uploadImageJquery',
-			value: function uploadImageJquery() {
-				(0, _jquery2.default)(function () {
-					(0, _jquery2.default)(".upload").change(function () {
-						if (this.files && this.files[0]) {
-							var reader = new FileReader();
-							reader.onload = imageIsLoaded;
-							reader.readAsDataURL(this.files[0]);
-						}
-					});
-				});
-
-				function imageIsLoaded(e) {
-					document.querySelector('body').style.background = "url('" + e.target.result + "') fixed";
-				};
 			}
 		}]);
 
-		return Background;
+		return Weather;
 	}(_react.Component);
 
-	exports.default = Background;
+	exports.default = Weather;
 
 /***/ },
 /* 230 */
@@ -35526,6 +35514,71 @@
 
 	var _reactRouter = __webpack_require__(166);
 
+	var _Background = __webpack_require__(232);
+
+	var _Background2 = _interopRequireDefault(_Background);
+
+	var _WeatherType = __webpack_require__(233);
+
+	var _WeatherType2 = _interopRequireDefault(_WeatherType);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Settings = function (_Component) {
+		_inherits(Settings, _Component);
+
+		function Settings() {
+			_classCallCheck(this, Settings);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Settings).apply(this, arguments));
+		}
+
+		_createClass(Settings, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'settings' },
+					_react2.default.createElement(
+						'h2',
+						null,
+						'Settings'
+					),
+					_react2.default.createElement(_Background2.default, null),
+					_react2.default.createElement(_WeatherType2.default, null)
+				);
+			}
+		}]);
+
+		return Settings;
+	}(_react.Component);
+
+	exports.default = Settings;
+
+/***/ },
+/* 232 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(166);
+
 	var _jquery = __webpack_require__(230);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
@@ -35538,70 +35591,151 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Weather = function (_Component) {
-		_inherits(Weather, _Component);
+	var Background = function (_Component) {
+		_inherits(Background, _Component);
 
-		function Weather(props) {
-			_classCallCheck(this, Weather);
+		function Background(props) {
+			_classCallCheck(this, Background);
 
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(Weather).call(this, props));
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Background).call(this, props));
 		}
 
-		_createClass(Weather, [{
+		_createClass(Background, [{
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					{ className: 'weather-module' },
-					_react2.default.createElement(
-						'div',
-						{ className: 'temperature' },
-						_react2.default.createElement('span', { className: 'weather-location' }),
-						_react2.default.createElement('br', null),
-						_react2.default.createElement('span', { className: 'current-temperature', onpageload: this.getWeatherData() }),
-						'F',
-						_react2.default.createElement('br', null),
-						_react2.default.createElement('img', { className: 'current-weather-icon' }),
-						_react2.default.createElement('br', null),
-						_react2.default.createElement('span', { className: 'current-weather' })
-					),
-					_react2.default.createElement(
-						'div',
-						{ className: 'wunderground-api' },
-						'Powered By:',
-						_react2.default.createElement(
-							'a',
-							{ href: 'https://www.wunderground.com/?apiref=ab14412e93633ca7' },
-							_react2.default.createElement('img', { src: "assets/wunderground_logo.png", className: 'wunderground_logo', alt: 'Weather Underground' })
-						)
-					)
+					{ className: 'changeBackground' },
+					'Choose a File to make your background',
+					_react2.default.createElement('br', null),
+					_react2.default.createElement('input', { type: 'file', name: 'ImageToUpload', className: 'upload', onClick: this.uploadImageJquery })
 				);
 			}
 		}, {
+			key: 'uploadImage',
+			value: function uploadImage() {
+				console.log('upload image form works');
+				var upload = document.querySelector('.upload').value;
+				console.log(upload);
+				// document.querySelector('body').style.background = "url(" + upload + ") no-repeat fixed";
+			}
+		}, {
+			key: 'uploadImageJquery',
+			value: function uploadImageJquery() {
+				(0, _jquery2.default)(function () {
+					(0, _jquery2.default)(".upload").change(function () {
+						if (this.files && this.files[0]) {
+							var reader = new FileReader();
+							reader.onload = imageIsLoaded;
+							reader.readAsDataURL(this.files[0]);
+						}
+					});
+				});
+
+				function imageIsLoaded(e) {
+					document.querySelector('body').style.background = "url('" + e.target.result + "') fixed";
+				};
+			}
+		}]);
+
+		return Background;
+	}(_react.Component);
+
+	exports.default = Background;
+
+/***/ },
+/* 233 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _jquery = __webpack_require__(230);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var temp_f;
+	var temp_c;
+
+	var WeatherType = function (_Component) {
+		_inherits(WeatherType, _Component);
+
+		function WeatherType() {
+			_classCallCheck(this, WeatherType);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(WeatherType).apply(this, arguments));
+		}
+
+		_createClass(WeatherType, [{
 			key: 'getWeatherData',
-			value: function getWeatherData() {
+			value: function getWeatherData(event) {
 				_jquery2.default.ajax({
 					url: "http://api.wunderground.com/api/e82b459c85a499a5/geolookup/conditions/q/CA/Los_Angeles.json",
 					dataType: "jsonp",
 					success: function success(parsed_json) {
 						var location = parsed_json['location']['city'];
-						var temp_f = parsed_json['current_observation']['temp_f'];
+						temp_f = parsed_json['current_observation']['temp_f'];
+						temp_c = parsed_json['current_observation']['temp_c'];
 						var icon = parsed_json['current_observation']['icon'];
 						var weather = parsed_json['current_observation']['weather'];
 
 						document.querySelector('.weather-location').innerHTML = location;
-						document.querySelector('.current-temperature').innerHTML = temp_f + "&deg;";
+
+						document.querySelector('.current-temperature').innerHTML = temp_f + "&deg;" + 'F';
+
 						document.querySelector('.current-weather').innerHTML = weather;
-						document.querySelector('.current-weather-icon').src = "http://icons.wxug.com/i/c/i/" + icon + ".gif";
+						document.querySelector('.current-weather-icon').src = "http://icons.wxug.com/i/c/k/" + icon + ".gif";
 					}
 				});
 			}
+		}, {
+			key: 'Selected',
+			value: function Selected(event) {
+				if (event.target.value == 'f') {
+					console.log(event.target.value);
+					console.log(temp_f);
+					document.querySelector('.current-temperature').innerHTML = temp_f + "&deg;" + 'F';
+				} else {
+					console.log(event.target.value);
+					document.querySelector('.current-temperature').innerHTML = temp_c + "&deg;" + 'C';
+				}
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ onpageload: this.getWeatherData() },
+					'Weather:',
+					_react2.default.createElement('input', { type: 'radio', name: 'temp_chooser', defaultValue: 'f', defaultChecked: true, onChange: this.Selected.bind(this) }),
+					' °F',
+					_react2.default.createElement('input', { type: 'radio', name: 'temp_chooser', defaultValue: 'c', onChange: this.Selected.bind(this) }),
+					' °C'
+				);
+			}
 		}]);
 
-		return Weather;
+		return WeatherType;
 	}(_react.Component);
 
-	exports.default = Weather;
+	exports.default = WeatherType;
 
 /***/ }
 /******/ ]);

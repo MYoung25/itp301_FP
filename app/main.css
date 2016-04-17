@@ -55,6 +55,8 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .weather-module {
 	width: 300px;
 	background: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 100px;
 }
 
 .weather-location{
@@ -83,10 +85,40 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 /**********************************************************************
 *
-*  						NAVIGATION
+*  						TIME
 *
 **********************************************************************/
 
+.time-module {
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+	width: 200px;
+	top: 0px;
+	margin: auto;
+	text-align: center;
+}
+
+.time-time {
+	font-size: 2em;
+}
+
+.time-timezone{
+
+}
+
+.time-year {
+
+}
+
+.time-date {
+
+}
+
+.calendar {
+	background: rgba(255,0,0,0.35);
+	width: 100%;
+	font-size: .75em;
+}
 
 /**********************************************************************
 *

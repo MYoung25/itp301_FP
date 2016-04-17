@@ -28,11 +28,8 @@ class WeatherType extends Component {
 	}
 	Selected(event){
 		if (event.target.value == 'f'){
-			console.log(event.target.value);
-			console.log(temp_f);
 		  	document.querySelector('.current-temperature').innerHTML = temp_f + "&deg;" + 'F';
 		} else {
-			console.log(event.target.value);
 		  	document.querySelector('.current-temperature').innerHTML = temp_c + "&deg;" + 'C';
 		}
 	}

@@ -7,8 +7,8 @@ class Settings extends Component {
 	render(){
 		return(
 			<div className="settings">
-				<h2>Settings</h2>
-				<Background />
+				<h2>Settings</h2><hr />
+				<Background /><hr />
 				<WeatherType />
 			</div>
 		);

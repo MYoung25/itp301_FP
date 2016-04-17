@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router'
 
-
 import Weather from '../components/Weather'
 import Settings from '../components/Settings'
+import Time from '../components/Time'
 
 
 class HomePage extends Component{
@@ -11,8 +11,9 @@ class HomePage extends Component{
 		return (
 			<div>
 				<Settings />
-
 				<Weather />
+				<Time />
+
 			</div>
 		);
 	}
