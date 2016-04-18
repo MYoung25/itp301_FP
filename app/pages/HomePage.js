@@ -7,11 +7,23 @@ import Time from '../components/Time'
 
 
 class HomePage extends Component{
+	constructor (props) {
+		super(props);
+		this.state = {
+			metric: 'f'
+		}
+		this.changeMetricType = this.changeMetricType.bind(this);
+	}
+	changeMetricType(value){
+		this.setState({
+			metric: value
+		});
+	}
 	render() {
 		return (
 			<div>
-				<Settings />
-				<Weather />
+				<Settings changeMetricType={this.changeMetricType} />
+				<Weather metric={this.state.metric} />
 				<Time />
 
 			</div>
