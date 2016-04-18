@@ -25129,7 +25129,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n  box-sizing: border-box;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n}\n\n*, *:before, *:after {\n  box-sizing: inherit;\n}\n\nbody {\n  margin: 0;\n  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #FFF;\n}\n\nh1, h2, h3, h4, h5, h6, p, ul {\n  margin: 0;\n  padding: 0;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n.nav{\n}\n\n.nav-img {\n\twidth: 35px;\n\tbackground-color: rgba(0,0,0,0.5);\n}\n\n.nav-link-home {\n\tposition: absolute;\n\ttop: 0px;\n\tright:0px;\n\tpadding-bottom: 15px;\n}\n\n.nav-link-settings {\n\tposition:absolute;\n\ttop: 0px;\n\tright: 0px;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tWEATHER MODULE\n*\n**********************************************************************/\n\n.weather-module {\n\twidth: 300px;\n\tbackground: rgba(0,0,0,0.5);\n}\n\n.weather-location{\n\tfont-size: 1.5em;\n}\n\n.temperature {\n\ttext-align: center;\n}\n\n.current-temperature {\n\tfont-size: 2.5em;\n\tcolor: #FFF;\n}\n\n.wunderground-api {\n\tmargin: auto;\n\ttext-align: center;\n}\n\n.wunderground_logo {\n\tclear: both;\n\twidth: 107px;\n}\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tSETTINGS\n*\n**********************************************************************/\n\n.settings {\n\tbackground: rgba(0,0,0,0.5);\n\tposition: absolute;\n\ttop: 0px;\n\tright: 35px;\n\twidth: 600px;\n\ttext-align: center;\n\tdisplay:none;\n}\n\n/*\n* \t\t\t\t\t\tChange Background\n*/\n\n.changeBackground {\n\ttext-align: center;\n}\n\n", ""]);
+	exports.push([module.id, "html {\n  box-sizing: border-box;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n}\n\n*, *:before, *:after {\n  box-sizing: inherit;\n}\n\nbody {\n  margin: 0;\n  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #FFF;\n}\n\nh1, h2, h3, h4, h5, h6, p, ul {\n  margin: 0;\n  padding: 0;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n.nav{\n}\n\n.nav-img {\n\twidth: 35px;\n\tbackground-color: rgba(0,0,0,0.5);\n}\n\n.nav-link-home {\n\tposition: absolute;\n\ttop: 0px;\n\tright:0px;\n\tpadding-bottom: 15px;\n}\n\n.nav-link-settings {\n\tposition:absolute;\n\ttop: 0px;\n\tright: 0px;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tWEATHER MODULE\n*\n**********************************************************************/\n\n.weather-module {\n\twidth: 200px;\n\tbackground: rgba(0,0,0,0.5);\n\tposition: fixed;\n\ttop: 100px;\n}\n\n.weather-location{\n\tfont-size: 1.5em;\n}\n\n.temperature {\n\ttext-align: center;\n}\n\n.current-temperature {\n\tfont-size: 2.5em;\n\tcolor: #FFF;\n}\n\n.wunderground-api {\n\tmargin: auto;\n\ttext-align: center;\n}\n\n.wunderground_logo {\n\tclear: both;\n\twidth: 107px;\n}\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tTIME\n*\n**********************************************************************/\n\n.time-module {\n\tbackground: rgba(0,0,0,0.5);\n\tposition: fixed;\n\twidth: 200px;\n\ttop: 0px;\n\tmargin: auto;\n\ttext-align: center;\n}\n\n.time-time {\n\tfont-size: 2em;\n}\n\n.time-timezone{\n\n}\n\n.time-year {\n\n}\n\n.time-date {\n\n}\n\n.calendar {\n/*\tbackground: rgba(255,0,0,0.35);\n*/\twidth: 100%;\n\tfont-size: .75em;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tSETTINGS\n*\n**********************************************************************/\n\n.settings {\n\tbackground: rgba(0,0,0,0.5);\n\tposition: absolute;\n\ttop: 0px;\n\tright: 35px;\n\twidth: 600px;\n\ttext-align: center;\n\tdisplay:none;\n}\n\n/*\n* \t\t\t\t\t\tChange Background\n*/\n\n.changeBackground {\n\ttext-align: center;\n}\n\n", ""]);
 
 	// exports
 
@@ -25535,6 +25535,10 @@
 
 	var _Settings2 = _interopRequireDefault(_Settings);
 
+	var _Time = __webpack_require__(234);
+
+	var _Time2 = _interopRequireDefault(_Time);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25546,20 +25550,33 @@
 	var HomePage = function (_Component) {
 		_inherits(HomePage, _Component);
 
-		function HomePage() {
+		function HomePage(props) {
 			_classCallCheck(this, HomePage);
 
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(HomePage).apply(this, arguments));
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(HomePage).call(this, props));
+
+			_this.state = {
+				metric: 'f'
+			};
+			return _this;
 		}
 
 		_createClass(HomePage, [{
+			key: 'changeMetricType',
+			value: function changeMetricType(value) {
+				this.setState({
+					metric: value
+				});
+			}
+		}, {
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(_Settings2.default, null),
-					_react2.default.createElement(_Weather2.default, null)
+					_react2.default.createElement(_Settings2.default, { changeMetricType: this.changeMetricType }),
+					_react2.default.createElement(_Weather2.default, { metric: this.state.metric }),
+					_react2.default.createElement(_Time2.default, null)
 				);
 			}
 		}, {
@@ -25610,10 +25627,60 @@
 		function Weather(props) {
 			_classCallCheck(this, Weather);
 
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(Weather).call(this, props));
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Weather).call(this, props));
+
+			_this.state = {
+				location: '',
+				weather: '',
+				temp: '',
+				metric: '',
+				icon: ''
+			};
+			_this.getWeatherData = _this.getWeatherData.bind(_this);
+			return _this;
 		}
 
 		_createClass(Weather, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				this.getWeatherData();
+			}
+		}, {
+			key: 'getWeatherData',
+			value: function getWeatherData(event) {
+				_jquery2.default.ajax({
+					url: "http://api.wunderground.com/api/e82b459c85a499a5/geolookup/conditions/q/CA/Los_Angeles.json",
+					dataType: "jsonp",
+					success: function (parsed_json) {
+						var location = parsed_json['location']['city'];
+						var temp_f = parsed_json['current_observation']['temp_f'];
+						var temp_c = parsed_json['current_observation']['temp_c'];
+						var icon = parsed_json['current_observation']['icon'];
+						var weather = parsed_json['current_observation']['weather'];
+
+						icon = "http://icons.wxug.com/i/c/k/" + icon + ".gif";
+
+						this.setState({
+							location: location,
+							weather: weather,
+							icon: icon
+						});
+
+						if (this.props.metric == 'f') {
+							this.setState({
+								temp: temp_f,
+								metric: ' F'
+							});
+						} else {
+							this.setState({
+								temp: temp_c,
+								metric: ' C'
+							});
+						}
+					}.bind(this)
+				});
+			}
+		}, {
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
@@ -25622,13 +25689,27 @@
 					_react2.default.createElement(
 						'div',
 						{ className: 'temperature' },
-						_react2.default.createElement('span', { className: 'weather-location' }),
+						_react2.default.createElement(
+							'span',
+							{ className: 'weather-location' },
+							this.state.location
+						),
 						_react2.default.createElement('br', null),
-						_react2.default.createElement('span', { className: 'current-temperature' }),
+						_react2.default.createElement(
+							'span',
+							{ className: 'current-temperature' },
+							this.state.temp,
+							' ° ',
+							this.state.metric
+						),
 						_react2.default.createElement('br', null),
-						_react2.default.createElement('img', { className: 'current-weather-icon' }),
+						_react2.default.createElement('img', { src: this.state.icon }),
 						_react2.default.createElement('br', null),
-						_react2.default.createElement('span', { className: 'current-weather' })
+						_react2.default.createElement(
+							'span',
+							{ className: 'current-weather' },
+							this.state.weather
+						)
 					),
 					_react2.default.createElement(
 						'div',
@@ -35550,8 +35631,10 @@
 						null,
 						'Settings'
 					),
+					_react2.default.createElement('hr', null),
 					_react2.default.createElement(_Background2.default, null),
-					_react2.default.createElement(_WeatherType2.default, null)
+					_react2.default.createElement('hr', null),
+					_react2.default.createElement(_WeatherType2.default, { changeMetricType: this.props.changeMetricType })
 				);
 			}
 		}]);
@@ -35659,10 +35742,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _jquery = __webpack_require__(230);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -35671,62 +35750,39 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var temp_f;
-	var temp_c;
-
 	var WeatherType = function (_Component) {
 		_inherits(WeatherType, _Component);
 
-		function WeatherType() {
+		function WeatherType(props) {
 			_classCallCheck(this, WeatherType);
 
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(WeatherType).apply(this, arguments));
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(WeatherType).call(this, props));
+
+			_this.Selected = _this.Selected.bind(_this);
+			return _this;
 		}
 
 		_createClass(WeatherType, [{
-			key: 'getWeatherData',
-			value: function getWeatherData(event) {
-				_jquery2.default.ajax({
-					url: "http://api.wunderground.com/api/e82b459c85a499a5/geolookup/conditions/q/CA/Los_Angeles.json",
-					dataType: "jsonp",
-					success: function success(parsed_json) {
-						var location = parsed_json['location']['city'];
-						temp_f = parsed_json['current_observation']['temp_f'];
-						temp_c = parsed_json['current_observation']['temp_c'];
-						var icon = parsed_json['current_observation']['icon'];
-						var weather = parsed_json['current_observation']['weather'];
-
-						document.querySelector('.weather-location').innerHTML = location;
-
-						document.querySelector('.current-temperature').innerHTML = temp_f + "&deg;" + 'F';
-
-						document.querySelector('.current-weather').innerHTML = weather;
-						document.querySelector('.current-weather-icon').src = "http://icons.wxug.com/i/c/k/" + icon + ".gif";
-					}
-				});
-			}
-		}, {
 			key: 'Selected',
 			value: function Selected(event) {
 				if (event.target.value == 'f') {
-					console.log(event.target.value);
-					console.log(temp_f);
-					document.querySelector('.current-temperature').innerHTML = temp_f + "&deg;" + 'F';
+					this.props.changeMetricType('f');
+					// document.querySelector('.current-temperature').innerHTML = temp_f + "&deg;" + 'F';
 				} else {
-					console.log(event.target.value);
-					document.querySelector('.current-temperature').innerHTML = temp_c + "&deg;" + 'C';
-				}
+						this.props.changeMetricType('c');
+						// document.querySelector('.current-temperature').innerHTML = temp_c + "&deg;" + 'C';
+					}
 			}
 		}, {
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					{ onpageload: this.getWeatherData() },
+					null,
 					'Weather:',
-					_react2.default.createElement('input', { type: 'radio', name: 'temp_chooser', defaultValue: 'f', defaultChecked: true, onChange: this.Selected.bind(this) }),
+					_react2.default.createElement('input', { type: 'radio', name: 'temp_chooser', defaultValue: 'f', defaultChecked: true, onChange: this.Selected }),
 					' °F',
-					_react2.default.createElement('input', { type: 'radio', name: 'temp_chooser', defaultValue: 'c', onChange: this.Selected.bind(this) }),
+					_react2.default.createElement('input', { type: 'radio', name: 'temp_chooser', defaultValue: 'c', onChange: this.Selected }),
 					' °C'
 				);
 			}
@@ -35736,6 +35792,112 @@
 	}(_react.Component);
 
 	exports.default = WeatherType;
+
+/***/ },
+/* 234 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Time = function (_Component) {
+		_inherits(Time, _Component);
+
+		function Time(props) {
+			_classCallCheck(this, Time);
+
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Time).call(this, props));
+
+			_this.state = {
+				time: 'time',
+				date: 'Date',
+				year: 'year',
+				timezone: 'timezone'
+			};
+			_this.getTime = _this.getTime.bind(_this);
+			return _this;
+		}
+
+		_createClass(Time, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				this.getTime();
+				// setInterval(this.getTime(), this.props.pollInterval);
+			}
+		}, {
+			key: 'getTime',
+			value: function getTime() {
+				var currentTime = String(new Date());
+				var time = currentTime.substr(16, 5);
+				var date = currentTime.substr(0, 10);
+				var year = currentTime.substr(11, 4);
+				var timezone = currentTime.substr(35, 3);
+
+				if (time.substr(0, 2) > '11') {
+					time += ' PM';
+				} else {
+					time += ' AM';
+				}
+
+				if (parseInt(time.substr(0, 2)) > 12) {
+					var minute = time.substr(2, 3);
+					var hour = parseInt(time.substr(0, 2)) - 12;
+					time = hour + minute + ' PM';
+				}
+
+				this.setState(_defineProperty({
+					time: time,
+					date: date,
+					year: year,
+					timezone: timezone }, 'timezone', timezone));
+
+				setTimeout(this.getTime, 1000);
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'time-module' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'calendar' },
+						this.state.date,
+						', ',
+						this.state.year
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'time-time' },
+						this.state.time
+					)
+				);
+			}
+		}]);
+
+		return Time;
+	}(_react.Component);
+
+	exports.default = Time;
 
 /***/ }
 /******/ ]);

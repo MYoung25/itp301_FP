@@ -17,7 +17,7 @@ class Weather extends Component{
 	componentDidMount(){
 		this.getWeatherData();
 	}
-	getWeatherData(event){	
+	getWeatherData(){
 		$.ajax({
   			url : "http://api.wunderground.com/api/e82b459c85a499a5/geolookup/conditions/q/CA/Los_Angeles.json",
 		  	dataType : "jsonp",
@@ -33,19 +33,24 @@ class Weather extends Component{
 				this.setState({
 					location: location,
 					weather: weather,
-					icon: icon
+					icon: icon,
 				});
+
+				console.log(this.props.metric);
 
 				if (this.props.metric == 'f'){
 					this.setState({
 						temp: temp_f,
 						metric: ' F'
 					});
+					console.log(this.props.metric + ' if statement f');
 				} else {
 					this.setState({
 						temp: temp_c,
 						metric: ' C'
-					})
+					});
+					console.log(this.props.metric + ' if statement c');
+
 				}
 			}.bind(this)
 		});

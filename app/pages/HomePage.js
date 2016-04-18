@@ -21,7 +21,7 @@ class HomePage extends Component{
 	render() {
 		return (
 			<div>
-				<Settings changeMetricType={this.changeMetricType} />
+				<Settings changeMetricType={this.changeMetricType.bind(this)} />
 				<Weather metric={this.state.metric} />
 				<Time />
 

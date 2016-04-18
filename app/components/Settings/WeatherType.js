@@ -6,13 +6,7 @@ class WeatherType extends Component {
 		this.Selected = this.Selected.bind(this);
 	}
 	Selected(event){
-		if (event.target.value == 'f'){
-			this.props.changeMetricType('f');
-		  	// document.querySelector('.current-temperature').innerHTML = temp_f + "&deg;" + 'F';
-		} else {
-			this.props.changeMetricType('c');
-		  	// document.querySelector('.current-temperature').innerHTML = temp_c + "&deg;" + 'C';
-		}
+		this.props.changeMetricType(event.target.value);
 	}
 	render(){
 		return(
