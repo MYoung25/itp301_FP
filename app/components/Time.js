@@ -32,6 +32,10 @@ class Time extends Component{
 			var minute = time.substr(2,3);
 			var hour = parseInt(time.substr(0,2)) - 12;
 			time = hour + minute + ' PM';
+		} else if(parseInt(time.substr(0,2)) < 1){
+			var minute = time.substr(2,3);
+			var hour = parseInt(time.substr(0,2)) + 12;
+			time = hour + minute + ' AM';
 		}
 
 		this.setState({

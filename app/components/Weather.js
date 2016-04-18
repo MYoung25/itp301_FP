@@ -8,15 +8,30 @@ class Weather extends Component{
 		this.state = {
 			location: '',
 			weather: '',
-			temp: '',
-			metric: '',
+			temp_f: '',
+			temp_c: '',
+			temp_output: '',
+			metric: this.props.metric,
 			icon: ''
 		}
 		this.getWeatherData = this.getWeatherData.bind(this);
+		this.chooseMetric = this.chooseMetric.bind(this);
 	}
 	componentDidMount(){
-		this.getWeatherData();
+		this.getWeatherData(this.state.metric);
 	}
+	componentWillReceiveProps(nextProps){
+		this.chooseMetric(nextProps.metric);
+	}
+	// shouldComponentUpdate(nextProps, nextState){
+	// 	console.log(nextProps.metric == this.state.metric);
+	// 	return nextProps.metric != this.state.metric;
+
+	// }
+	// componentWillUpdate(nextProps, nextState){
+	// 	// I dont think I have anything to do here
+	// }
+
 	getWeatherData(){
 		$.ajax({
   			url : "http://api.wunderground.com/api/e82b459c85a499a5/geolookup/conditions/q/CA/Los_Angeles.json",
@@ -34,26 +49,30 @@ class Weather extends Component{
 					location: location,
 					weather: weather,
 					icon: icon,
+					temp_f: temp_f,
+					temp_c: temp_c,
+					temp_output: temp_f
 				});
 
-				console.log(this.props.metric);
-
-				if (this.props.metric == 'f'){
-					this.setState({
-						temp: temp_f,
-						metric: ' F'
-					});
-					console.log(this.props.metric + ' if statement f');
-				} else {
-					this.setState({
-						temp: temp_c,
-						metric: ' C'
-					});
-					console.log(this.props.metric + ' if statement c');
-
-				}
+				this.chooseMetric();
 			}.bind(this)
 		});
+	}
+	chooseMetric(newMetric){
+		if (newMetric == 'f' || this.state.metric == 'f'){
+			// console.log('F in Weather');
+			this.setState({
+				temp_output: this.state.temp_f,
+				metric: ' F'
+			});
+		} else {
+				// console.log('C in weather');
+
+			this.setState({
+				temp_output: this.state.temp_c,
+				metric: ' C'
+			});
+		}
 	}
 	render(){
 		return(
@@ -63,7 +82,7 @@ class Weather extends Component{
 						{this.state.location}</span><br/>
 
 					<span className="current-temperature">
-						{this.state.temp} &deg; {this.state.metric}
+						{this.state.temp_output} &deg; {this.state.metric}
 					</span><br/>
 
 					<img src={this.state.icon} /><br/>
@@ -79,6 +98,9 @@ class Weather extends Component{
 			</div>
 		);
 	}
+	// componentdidUpdate(prevProps, prevState){
+	// 	console.log(prevProps);
+	// }
 }
 
 export default Weather;

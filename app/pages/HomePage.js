@@ -14,6 +14,7 @@ class HomePage extends Component{
 		}
 	}
 	changeMetricType(value){
+		// console.log(value + ' in homepage');
 		this.setState({
 			metric: value
 		});
@@ -24,7 +25,6 @@ class HomePage extends Component{
 				<Settings changeMetricType={this.changeMetricType.bind(this)} />
 				<Weather metric={this.state.metric} />
 				<Time />
-
 			</div>
 		);
 	}
