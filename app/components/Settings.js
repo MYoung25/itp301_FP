@@ -4,6 +4,7 @@ import Background from './Background.js'
 import WeatherType from './Settings/WeatherType'
 
 class Settings extends Component {
+	// This passes the fucntion into <WeatherType /> through props
 	render(){
 		return(
 			<div className="settings">

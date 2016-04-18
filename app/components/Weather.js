@@ -12,29 +12,28 @@ class Weather extends Component{
 			temp_c: '',
 			temp_output: '',
 			metric: this.props.metric,
-			icon: ''
+			icon: '',
+			city: 'Los_Angeles',
+			state: 'CA'
 		}
 		this.getWeatherData = this.getWeatherData.bind(this);
 		this.chooseMetric = this.chooseMetric.bind(this);
 	}
 	componentDidMount(){
+		// this is the original call to getWeatherData which sets states
+		// for all weather-related information
 		this.getWeatherData(this.state.metric);
 	}
 	componentWillReceiveProps(nextProps){
+		// This accepts nextProps, which are the updated props from HomePage
 		this.chooseMetric(nextProps.metric);
 	}
-	// shouldComponentUpdate(nextProps, nextState){
-	// 	console.log(nextProps.metric == this.state.metric);
-	// 	return nextProps.metric != this.state.metric;
-
-	// }
-	// componentWillUpdate(nextProps, nextState){
-	// 	// I dont think I have anything to do here
-	// }
-
 	getWeatherData(){
+
+		var geolookup = "http://api.wunderground.com/api/e82b459c85a499a5/geolookup/conditions/q/" + this.state.state + "/" + this.state.city + ".json";
+
 		$.ajax({
-  			url : "http://api.wunderground.com/api/e82b459c85a499a5/geolookup/conditions/q/CA/Los_Angeles.json",
+  			url : geolookup,
 		  	dataType : "jsonp",
 		  	success : function(parsed_json) {
 			  	var location = parsed_json['location']['city'];
@@ -60,13 +59,11 @@ class Weather extends Component{
 	}
 	chooseMetric(newMetric){
 		if (newMetric == 'f' || this.state.metric == 'f'){
-			// console.log('F in Weather');
 			this.setState({
 				temp_output: this.state.temp_f,
 				metric: ' F'
 			});
 		} else {
-				// console.log('C in weather');
 
 			this.setState({
 				temp_output: this.state.temp_c,
@@ -98,9 +95,7 @@ class Weather extends Component{
 			</div>
 		);
 	}
-	// componentdidUpdate(prevProps, prevState){
-	// 	console.log(prevProps);
-	// }
+
 }
 
 export default Weather;

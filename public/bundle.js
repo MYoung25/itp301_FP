@@ -25564,6 +25564,7 @@
 		_createClass(HomePage, [{
 			key: 'changeMetricType',
 			value: function changeMetricType(value) {
+				// console.log(value + ' in homepage');
 				this.setState({
 					metric: value
 				});
@@ -25574,7 +25575,7 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(_Settings2.default, { changeMetricType: this.changeMetricType }),
+					_react2.default.createElement(_Settings2.default, { changeMetricType: this.changeMetricType.bind(this) }),
 					_react2.default.createElement(_Weather2.default, { metric: this.state.metric }),
 					_react2.default.createElement(_Time2.default, null)
 				);
@@ -25632,22 +25633,39 @@
 			_this.state = {
 				location: '',
 				weather: '',
-				temp: '',
-				metric: '',
+				temp_f: '',
+				temp_c: '',
+				temp_output: '',
+				metric: _this.props.metric,
 				icon: ''
 			};
 			_this.getWeatherData = _this.getWeatherData.bind(_this);
+			_this.chooseMetric = _this.chooseMetric.bind(_this);
 			return _this;
 		}
 
 		_createClass(Weather, [{
 			key: 'componentDidMount',
 			value: function componentDidMount() {
-				this.getWeatherData();
+				this.getWeatherData(this.state.metric);
 			}
 		}, {
+			key: 'componentWillReceiveProps',
+			value: function componentWillReceiveProps(nextProps) {
+				this.chooseMetric(nextProps.metric);
+			}
+			// shouldComponentUpdate(nextProps, nextState){
+			// 	console.log(nextProps.metric == this.state.metric);
+			// 	return nextProps.metric != this.state.metric;
+
+			// }
+			// componentWillUpdate(nextProps, nextState){
+			// 	// I dont think I have anything to do here
+			// }
+
+		}, {
 			key: 'getWeatherData',
-			value: function getWeatherData(event) {
+			value: function getWeatherData() {
 				_jquery2.default.ajax({
 					url: "http://api.wunderground.com/api/e82b459c85a499a5/geolookup/conditions/q/CA/Los_Angeles.json",
 					dataType: "jsonp",
@@ -25663,22 +25681,33 @@
 						this.setState({
 							location: location,
 							weather: weather,
-							icon: icon
+							icon: icon,
+							temp_f: temp_f,
+							temp_c: temp_c,
+							temp_output: temp_f
 						});
 
-						if (this.props.metric == 'f') {
-							this.setState({
-								temp: temp_f,
-								metric: ' F'
-							});
-						} else {
-							this.setState({
-								temp: temp_c,
-								metric: ' C'
-							});
-						}
+						this.chooseMetric();
 					}.bind(this)
 				});
+			}
+		}, {
+			key: 'chooseMetric',
+			value: function chooseMetric(newMetric) {
+				if (newMetric == 'f' || this.state.metric == 'f') {
+					// console.log('F in Weather');
+					this.setState({
+						temp_output: this.state.temp_f,
+						metric: ' F'
+					});
+				} else {
+					// console.log('C in weather');
+
+					this.setState({
+						temp_output: this.state.temp_c,
+						metric: ' C'
+					});
+				}
 			}
 		}, {
 			key: 'render',
@@ -25698,7 +25727,7 @@
 						_react2.default.createElement(
 							'span',
 							{ className: 'current-temperature' },
-							this.state.temp,
+							this.state.temp_output,
 							' ° ',
 							this.state.metric
 						),
@@ -25722,6 +25751,10 @@
 					)
 				);
 			}
+			// componentdidUpdate(prevProps, prevState){
+			// 	console.log(prevProps);
+			// }
+
 		}]);
 
 		return Weather;
@@ -35730,7 +35763,7 @@
 /* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -35763,27 +35796,21 @@
 		}
 
 		_createClass(WeatherType, [{
-			key: 'Selected',
+			key: "Selected",
 			value: function Selected(event) {
-				if (event.target.value == 'f') {
-					this.props.changeMetricType('f');
-					// document.querySelector('.current-temperature').innerHTML = temp_f + "&deg;" + 'F';
-				} else {
-						this.props.changeMetricType('c');
-						// document.querySelector('.current-temperature').innerHTML = temp_c + "&deg;" + 'C';
-					}
+				this.props.changeMetricType(event.target.value);
 			}
 		}, {
-			key: 'render',
+			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
-					'div',
+					"div",
 					null,
-					'Weather:',
-					_react2.default.createElement('input', { type: 'radio', name: 'temp_chooser', defaultValue: 'f', defaultChecked: true, onChange: this.Selected }),
-					' °F',
-					_react2.default.createElement('input', { type: 'radio', name: 'temp_chooser', defaultValue: 'c', onChange: this.Selected }),
-					' °C'
+					"Weather:",
+					_react2.default.createElement("input", { type: "radio", name: "temp_chooser", defaultValue: "f", defaultChecked: true, onChange: this.Selected }),
+					" °F",
+					_react2.default.createElement("input", { type: "radio", name: "temp_chooser", defaultValue: "c", onChange: this.Selected }),
+					" °C"
 				);
 			}
 		}]);
@@ -35862,6 +35889,10 @@
 					var minute = time.substr(2, 3);
 					var hour = parseInt(time.substr(0, 2)) - 12;
 					time = hour + minute + ' PM';
+				} else if (parseInt(time.substr(0, 2)) < 1) {
+					var minute = time.substr(2, 3);
+					var hour = parseInt(time.substr(0, 2)) + 12;
+					time = hour + minute + ' AM';
 				}
 
 				this.setState(_defineProperty({

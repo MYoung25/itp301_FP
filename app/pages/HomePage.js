@@ -14,10 +14,12 @@ class HomePage extends Component{
 		}
 	}
 	changeMetricType(value){
-		// console.log(value + ' in homepage');
 		this.setState({
 			metric: value
 		});
+		// This is the function that's called by the change in settings,
+		// it changes the state of metric.  Which is then passed into <Weather />
+		// through props.
 	}
 	render() {
 		return (
