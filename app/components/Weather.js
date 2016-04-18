@@ -19,7 +19,7 @@ class Weather extends Component{
 	}
 	getWeatherData(event){	
 		$.ajax({
-  			url : "http://api.wunderground.com/api/e82b459c85a499a5/geolookup/conditions/q/CA/co_Angeles.json",
+  			url : "http://api.wunderground.com/api/e82b459c85a499a5/geolookup/conditions/q/CA/Los_Angeles.json",
 		  	dataType : "jsonp",
 		  	success : function(parsed_json) {
 			  	var location = parsed_json['location']['city'];
@@ -27,7 +27,7 @@ class Weather extends Component{
 		  		var temp_c = parsed_json['current_observation']['temp_c'];
 		  		var icon = parsed_json['current_observation']['icon'];
 		  		var weather = parsed_json['current_observation']['weather'];
-		  		
+
 		  		icon = "http://icons.wxug.com/i/c/k/" + icon + ".gif";
 				
 				this.setState({

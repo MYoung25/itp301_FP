@@ -12,7 +12,6 @@ class HomePage extends Component{
 		this.state = {
 			metric: 'f'
 		}
-		this.changeMetricType = this.changeMetricType.bind(this);
 	}
 	changeMetricType(value){
 		this.setState({
