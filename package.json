@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --progress",
-    "build": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress"
+    "build": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress && rm ./build_minify/bundle.js && minify --output ./build_minify/bundle.js ./build/bundle.js"
   },
   "author": "Michael Young",
   "license": "ISC",
