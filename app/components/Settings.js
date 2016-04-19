@@ -10,7 +10,10 @@ class Settings extends Component {
 			<div className="settings">
 				<h2>Settings</h2><hr />
 				<Background /><hr />
-				<WeatherType changeMetricType={this.props.changeMetricType} />
+				<WeatherType 
+					changeMetricType={this.props.changeMetricType}
+					changeUsState={this.props.changeUsState}
+					changeCity={this.props.changeCity} />
 			</div>
 		);
 	}
