@@ -25488,12 +25488,6 @@
 				);
 			}
 		}, {
-			key: 'LoadBackground',
-			value: function LoadBackground() {
-				document.querySelector('body').style.background = "url('assets/background.jpg') fixed";
-				document.querySelector('body').style.backgroundSize = "200vh";
-			}
-		}, {
 			key: 'openSettings',
 			value: function openSettings() {
 				if (document.querySelector('.settings').style.display == "block") {
@@ -25600,11 +25594,6 @@
 					_react2.default.createElement(_Weather2.default, { metric: this.state.metric, usState: this.state.usState, city: this.state.city }),
 					_react2.default.createElement(_Time2.default, null)
 				);
-			}
-		}, {
-			key: 'LoadBackground',
-			value: function LoadBackground() {
-				document.querySelector('body').style.background = "url('../assets/background.jpg')";
 			}
 		}]);
 
@@ -25719,12 +25708,12 @@
 		}, {
 			key: 'chooseMetric',
 			value: function chooseMetric(newMetric) {
-				if (newMetric == 'F' || this.state.metric == 'F') {
+				if (newMetric == 'F' || this.state.metric == 'F' || localStorage.getItem('metric') == 'F') {
 					this.setState({
 						temp_output: this.state.temp_f,
 						metric: ' F'
 					});
-				} else if (newMetric == 'C' || this.state.metric == ' C') {
+				} else if (newMetric == 'C' || this.state.metric == ' C' || localStorage.getItem('metric') == 'C') {
 					this.setState({
 						temp_output: this.state.temp_c,
 						metric: ' C'
@@ -35756,7 +35745,16 @@
 		function Background(props) {
 			_classCallCheck(this, Background);
 
-			return _possibleConstructorReturn(this, Object.getPrototypeOf(Background).call(this, props));
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Background).call(this, props));
+
+			if (localStorage.getItem('background_img') == null) {
+				document.querySelector('body').style.background = "url('./assets/background.jpg')";
+			} else {
+				document.querySelector('body').style.background = "url(" + localStorage.getItem("background_img") + ") fixed";
+			}
+			document.querySelector('body').style.backgroundSize = "200vh";
+
+			return _this;
 		}
 
 		_createClass(Background, [{
@@ -35793,6 +35791,7 @@
 
 				function imageIsLoaded(e) {
 					document.querySelector('body').style.background = "url('" + e.target.result + "') fixed";
+					localStorage.setItem("background_img", e.target.result);
 				};
 			}
 		}]);
@@ -36225,7 +36224,7 @@
 					year: year,
 					timezone: timezone }, 'timezone', timezone));
 
-				setTimeout(this.getTime, 1000);
+				setTimeout(this.getTime, 5000);
 			}
 		}, {
 			key: 'render',

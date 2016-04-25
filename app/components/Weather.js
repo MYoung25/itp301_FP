@@ -28,13 +28,11 @@ class Weather extends Component{
 	componentWillReceiveProps(nextProps){
 		// This accepts nextProps, which are the updated props from HomePage
 		this.chooseMetric(nextProps.metric);
-		console.log(nextProps);
 		this.locationUpdate(nextProps.city, nextProps.usState);
 	}
 	getWeatherData(){
 
 		var geolookup = "http://api.wunderground.com/api/e82b459c85a499a5/geolookup/conditions/q/" + this.props.usState + "/" + this.props.city + ".json";
-		console.log(geolookup);
 		$.ajax({
   			url : geolookup,
 		  	dataType : "jsonp",
@@ -63,12 +61,12 @@ class Weather extends Component{
 		});
 	}
 	chooseMetric(newMetric){
-		if (newMetric == 'F' || this.state.metric == 'F'){
+		if (newMetric == 'F' || this.state.metric == 'F' || localStorage.getItem('metric') == 'F'){
 			this.setState({
 				temp_output: this.state.temp_f,
 				metric: ' F'
 			});
-		} else if (newMetric == 'C' || this.state.metric == ' C') {
+		} else if (newMetric == 'C' || this.state.metric == ' C' || localStorage.getItem('metric') == 'C') {
 			this.setState({
 				temp_output: this.state.temp_c,
 				metric: ' C'

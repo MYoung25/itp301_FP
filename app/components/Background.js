@@ -6,7 +6,17 @@ import $ from 'jquery'
 class Background extends Component{
 	constructor (props){
 		super(props);
+		if(localStorage.getItem('background_img') == null){
+			document.querySelector('body').style.background = "url('./assets/background.jpg')";
+		} else {
+			document.querySelector('body').style.background = "url(" + localStorage.getItem("background_img") + ") fixed";
+		}
+		document.querySelector('body').style.backgroundSize = "200vh";
+
 	}
+
+
+
 	render() {
 		return (
 			<div className="changeBackground">
@@ -33,7 +43,8 @@ class Background extends Component{
 		});
 
 		function imageIsLoaded(e) {
-    	document.querySelector('body').style.background = "url('" + e.target.result + "') fixed";
+	    	document.querySelector('body').style.background = "url('" + e.target.result + "') fixed";
+	    	localStorage.setItem("background_img", e.target.result);
 		};
 
 	}

@@ -45,7 +45,7 @@ class Time extends Component{
 			timezone, timezone
 		});
 
-		setTimeout(this.getTime, 1000);
+		setTimeout(this.getTime, 5000);
 	}
 	render(){
 		return(

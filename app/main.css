@@ -34,14 +34,14 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 .nav-link-home {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	right:0px;
 	padding-bottom: 15px;
 }
 
 .nav-link-settings {
-	position:absolute;
+	position:fixed;
 	top: 0px;
 	right: 0px;
 }
@@ -122,11 +122,27 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 /**********************************************************************
 *
-*  						NAVIGATION
+*  							NEWS
 *
 **********************************************************************/
+.news {
+	position: fixed;
+	right: 0px;
+	top: 150px;
+	background-color: rgba(0,0,0,0.5);
+	width: 400px;
+	height: 300px;
+}
 
+.news a{
+	color: #FFF;
+	text-decoration: none;
+}
 
+.news a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
 
 /**********************************************************************
 *
@@ -151,12 +167,13 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 .settings {
 	background: rgba(0,0,0,0.5);
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	right: 35px;
 	width: 600px;
 	text-align: center;
 	display:none;
+	z-index: 100;
 }
 
 /*
