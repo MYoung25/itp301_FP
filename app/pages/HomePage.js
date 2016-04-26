@@ -41,30 +41,6 @@ class HomePage extends Component{
 			city: value
 		});
 	}
-	// getNews(){
-
-	// 	var apikey = "a620e8bff37d1173b6e6ed8712b999d4:1:75112088";
-	// 	var section = "home";
-
-	// 	var newsLookup = "http://api.nytimes.com/svc/topstories/v1/" + section + ".json?api-key=" + apikey;
-	// 	$.ajax({
- //  			url : newsLookup,
- //  			type : "GET",
-	// 	  	success : function(news) {
-	// 	  		var results = news.results[0].title;
-	// 			var abstract = news.results[0].abstract;
-	// 			var url = news.results[0].url;
-	// 			console.log(url);
-
-	// 			this.setState({
-	// 				article_title: results,
-	// 				article_abstract: abstract,
-	// 				article_url: url,
-	// 			});
-	// 		}.bind(this)
-	// 	});
-	// }
-	// title={this.state.article_title} abstract={this.state.article_abstract} url={this.state.article_url}
 	render() {
 		return (
 			<div>
