@@ -8,14 +8,15 @@ class NewsArticle extends Component {
 	}
 	imgDisplay(){
 		if(this.props.data.multimedia[0] !== undefined){
-			return this.props.data.multimedia[0].url;
+			console.log(this.props.data.multimedia[0].url);
+			return "'" + this.props.data.multimedia[0].url + "'";
 		} else {
 			return "";
 		}
 	}
 	render(){
 		return(
-			<a href={this.props.data.url}>
+			<a href={this.props.data.url} target="_blank">
 			<div>
 				<img src={this.imgDisplay} />
 				<span className="article-title">{this.props.data.title}</span><br/>
