@@ -40,8 +40,7 @@ class News extends Component {
 		});
 		return(
 			<div className="news">
-				<h2 className="nytimes"> NY TIMES HEADER
-				</h2>
+				<h2 className="nytimes"></h2>
 				{articles}
 			</div>
 		);

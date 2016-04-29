@@ -6,9 +6,7 @@ import $ from 'jquery'
 class Background extends Component{
 	constructor (props){
 		super(props);
-		if(localStorage.getItem('background_img') == null){
-			document.querySelector('body').style.background = "url('./assets/background.jpg')";
-		} else {
+		if(localStorage.getItem('background_img') !== null){
 			document.querySelector('body').style.background = "url(" + localStorage.getItem("background_img") + ") fixed";
 		}
 	}
