@@ -1,3 +1,5 @@
+// This gets the current time and keeps it updated on the screen with a timer
+
 import React, {Component} from 'react'
 
 class Time extends Component{
@@ -13,21 +15,24 @@ class Time extends Component{
 	}
 	componentDidMount(){
 		this.getTime();
-		// setInterval(this.getTime(), this.props.pollInterval);
 	}
 	getTime() {
+		// get the time as a STRING
 		var currentTime = String(new Date());
+		// take the pieces of the string and put them into variables
 		var time = currentTime.substr(16,5);
 		var date = currentTime.substr(0, 10);
 		var year = currentTime.substr(11, 4);
 		var timezone = currentTime.substr(35,3);
 
+		// change from military time to 12hr time
 		if(time.substr(0,2) > '11'){
 			time += ' PM';
 		} else {
 			time += ' AM';
 		}
 
+		// add the AM or PM label
 		if(parseInt(time.substr(0,2)) > 12){
 			var minute = time.substr(2,3);
 			var hour = parseInt(time.substr(0,2)) - 12;
@@ -38,6 +43,7 @@ class Time extends Component{
 			time = hour + minute + ' AM';
 		}
 
+		// update the states
 		this.setState({
 			time: time,
 			date: date,
@@ -45,9 +51,11 @@ class Time extends Component{
 			timezone, timezone
 		});
 
+		// call this function again in ~5 seconds
 		setTimeout(this.getTime, 5000);
 	}
 	render(){
+		// output the time in an easily readable format
 		return(
 			<div className="time-module">
 				<div className="calendar">

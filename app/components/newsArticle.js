@@ -1,30 +1,35 @@
+// This is the component that produces each of the articles
+
 import React, {Component} from 'react'
 import {Link} from 'react-router'
 
 class NewsArticle extends Component {
 	constructor (props) {
 		super(props);
-		this.imgDisplay = this.imgDisplay.bind(this);
+		this.expand = this.expand.bind(this);
 	}
-	imgDisplay(){
-		if(this.props.data.multimedia[0] !== undefined){
-			console.log(this.props.data.multimedia[0].url);
-			return "'" + this.props.data.multimedia[0].url + "'";
+	expand(obj){
+		// get the computed style and then toggle the article's snippet
+		if(window.getComputedStyle(obj.target.nextSibling.nextSibling).display == 'none'){
+			obj.target.nextSibling.nextSibling.style.display='inline';
 		} else {
-			return "";
+			obj.target.nextSibling.nextSibling.style.display='none';
 		}
 	}
 	render(){
+		// if there is a photo, pull the url, add the url to the component, then render
+		var img;
+		if(this.props.photo != undefined){
+			img = <img src={this.props.photo.url} className="thumbnail" />;
+		}
 		return(
-			<a href={this.props.data.url} target="_blank">
-			<div>
-				<img src={this.imgDisplay} />
-				<span className="article-title">{this.props.data.title}</span><br/>
+			<div className="snippet">
+				{img}
+				<span className="article-title" onClick={this.expand}>{this.props.data.title}</span><br/>
 				<span className="article">{this.props.data.abstract} 
-				 Read more...</span>
+				 	<a href={this.props.data.url} target="_blank"> Read more...</a>
+				</span>
 			</div>
-			<hr/>
-			</a>
 		);
 	}
 }

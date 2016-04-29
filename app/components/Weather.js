@@ -1,3 +1,5 @@
+// Michael, you should probably fix this
+
 import React, {Component} from 'react'
 import {Link} from 'react-router'
 import $ from 'jquery'
@@ -33,32 +35,32 @@ class Weather extends Component{
 	getWeatherData(){
 
 		var geolookup = "http://api.wunderground.com/api/e82b459c85a499a5/geolookup/conditions/q/" + this.props.usState + "/" + this.props.city + ".json";
-		$.ajax({
-  			url : geolookup,
-		  	dataType : "jsonp",
-		  	success : function(parsed_json) {
-			  	var city = parsed_json['location']['city'];
-			  	var state = parsed_json['location']['state'];
-		  		var temp_f = parsed_json['current_observation']['temp_f'];
-		  		var temp_c = parsed_json['current_observation']['temp_c'];
-		  		var icon = parsed_json['current_observation']['icon'];
-		  		var weather = parsed_json['current_observation']['weather'];
+		// $.ajax({
+  // 			url : geolookup,
+		//   	dataType : "jsonp",
+		//   	success : function(parsed_json) {
+		// 	  	var city = parsed_json['location']['city'];
+		// 	  	var state = parsed_json['location']['state'];
+		//   		var temp_f = parsed_json['current_observation']['temp_f'];
+		//   		var temp_c = parsed_json['current_observation']['temp_c'];
+		//   		var icon = parsed_json['current_observation']['icon'];
+		//   		var weather = parsed_json['current_observation']['weather'];
 
-		  		icon = "http://icons.wxug.com/i/c/k/" + icon + ".gif";
+		//   		icon = "http://icons.wxug.com/i/c/k/" + icon + ".gif";
 				
-				this.setState({
-					city: city,
-					state: state,
-					weather: weather,
-					icon: icon,
-					temp_f: temp_f,
-					temp_c: temp_c,
-					temp_output: temp_f
-				});
+		// 		this.setState({
+		// 			city: city,
+		// 			state: state,
+		// 			weather: weather,
+		// 			icon: icon,
+		// 			temp_f: temp_f,
+		// 			temp_c: temp_c,
+		// 			temp_output: temp_f
+		// 		});
 
-				this.chooseMetric();
-			}.bind(this)
-		});
+		// 		this.chooseMetric();
+		// 	}.bind(this)
+		// });
 	}
 	chooseMetric(newMetric){
 		if (newMetric == 'F' || this.state.metric == 'F' || localStorage.getItem('metric') == 'F'){

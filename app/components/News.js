@@ -1,3 +1,6 @@
+// This produces the news component, makes the AJAX call and then produces NewsArticle components
+// for each article returned fron the AJAX call
+
 import React, {Component} from 'react'
 import {Link} from 'react-router'
 import NewsArticle from './NewsArticle'
@@ -33,10 +36,12 @@ class News extends Component {
 	render(){
 		var articles = [];
 		this.state.newsResult.forEach(function(news){
-			articles.push(<NewsArticle data={news} key={news.title} />);
+			articles.push(<NewsArticle data={news} photo={news.multimedia[0]} key={news.title} />);
 		});
 		return(
 			<div className="news">
+				<h2 className="nytimes"> NY TIMES HEADER
+				</h2>
 				{articles}
 			</div>
 		);

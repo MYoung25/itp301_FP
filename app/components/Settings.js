@@ -1,10 +1,12 @@
+// This houses each component that changes settings of another component
+
 import React, {Component} from 'react'
 import { Link } from 'react-router'
 import Background from './Background.js'
 import WeatherType from './Settings/WeatherType'
 
 class Settings extends Component {
-	// This passes the fucntion into <WeatherType /> through props
+	// This passes the function into <WeatherType /> through props
 	render(){
 		return(
 			<div className="settings">

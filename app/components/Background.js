@@ -11,8 +11,6 @@ class Background extends Component{
 		} else {
 			document.querySelector('body').style.background = "url(" + localStorage.getItem("background_img") + ") fixed";
 		}
-		document.querySelector('body').style.backgroundSize = "200vh";
-
 	}
 
 
@@ -45,6 +43,7 @@ class Background extends Component{
 		function imageIsLoaded(e) {
 	    	document.querySelector('body').style.background = "url('" + e.target.result + "') fixed";
 	    	localStorage.setItem("background_img", e.target.result);
+	    	document.querySelector('body').style.backgroundSize = "200vh";
 		};
 
 	}
