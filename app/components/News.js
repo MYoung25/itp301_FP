@@ -45,7 +45,9 @@ class News extends Component {
 		return(
 			<div className="news">
 				<h2 className="nytimes" onClick={this.nyTimes}></h2>
-				{articles}
+				<div className="news-snippets">
+					{articles}
+				</div>
 			</div>
 		);
 	}
