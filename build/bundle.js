@@ -25566,7 +25566,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n  box-sizing: border-box;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n}\n\n*, *:before, *:after {\n  box-sizing: inherit;\n}\n\nbody {\n  margin: 0;\n  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #FFF;\n  /*background-size: 200vh;*/\n  height: 100vh;\n  background-size: cover !important;\n}\n\nh1, h2, h3, h4, h5, h6, p, ul {\n  margin: 0;\n  padding: 0;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n.nav{\n}\n\n.nav-img {\n\twidth: 35px;\n\tbackground-color: rgba(0,0,0,0.5);\n}\n\n.nav-link-home {\n\tposition: fixed;\n\ttop: 0px;\n\tright:0px;\n\tpadding-bottom: 15px;\n}\n\n.nav-link-settings {\n\tposition:fixed;\n\ttop: 0px;\n\tright: 0px;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tWEATHER MODULE\n*\n**********************************************************************/\n\n.weather-module {\n\twidth: 200px;\n\tbackground: rgba(0,0,0,0.5);\n\tposition: fixed;\n\ttop: 100px;\n}\n\n.weather-location{\n\tfont-size: 1.5em;\n}\n\n.temperature {\n\ttext-align: center;\n}\n\n.current-temperature {\n\tfont-size: 2.5em;\n\tcolor: #FFF;\n}\n\n.wunderground-api {\n\tmargin: auto;\n\ttext-align: center;\n}\n\n.wunderground_logo {\n\tclear: both;\n\twidth: 107px;\n}\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tTIME\n*\n**********************************************************************/\n\n.time-module {\n\tbackground: rgba(0,0,0,0.5);\n\tposition: fixed;\n\twidth: 200px;\n\ttop: 0px;\n\tmargin: auto;\n\ttext-align: center;\n}\n\n.time-time {\n\tfont-size: 2em;\n}\n\n.time-timezone{\n\n}\n\n.time-year {\n\n}\n\n.time-date {\n\n}\n\n.calendar {\n/*\tbackground: rgba(255,0,0,0.35);\n*/\twidth: 100%;\n\tfont-size: .75em;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\t\tNEWS\n*\n**********************************************************************/\n.news {\n\tposition: fixed;\n\tright: 0px;\n\ttop: 150px;\n\tbackground-color: rgba(0,0,0,0.5);\n\twidth: 400px;\n\theight: 300px;\n\toverflow: scroll;\n}\n\n.news a{\n\tcolor: #FFF;\n\ttext-decoration: none;\n}\n\n.news a:visited {\n\tcolor: #FFF;\n\ttext-decoration: none;\n}\n\n.article-title {\n\tfont-size: 1.2em;\n\tfont-weight: bold;\n}\n\n.article{\n\tfont-size: .9em;\n\tcolor: #CCC;\n\tdisplay: none;\n}\n\n.snippet {\n\tmin-height: 76px;\n\tborder-bottom: 1px dotted #FFF;\n\tmargin-bottom: 5px;\n}\n\n.thumbnail {\n\tfloat: left;\n\twidth: 75px;\n\theight: 75px;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tSETTINGS\n*\n**********************************************************************/\n\n.settings {\n\tbackground: rgba(0,0,0,0.5);\n\tposition: fixed;\n\ttop: 0px;\n\tright: 35px;\n\twidth: 600px;\n\ttext-align: center;\n\tdisplay:none;\n\tz-index: 100;\n}\n\n/*\n* \t\t\t\t\t\tChange Background\n*/\n\n.changeBackground {\n\ttext-align: center;\n}\n\n", ""]);
+	exports.push([module.id, "html {\n  box-sizing: border-box;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n}\n\n*, *:before, *:after {\n  box-sizing: inherit;\n}\n\nbody {\n  margin: 0;\n  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #FFF;\n  /*background-size: 200vh;*/\n  background-image: url(/assets/background.jpg);\n  height: 100vh;\n  background-size: cover !important;\n}\n\nh1, h2, h3, h4, h5, h6, p, ul {\n  margin: 0;\n  padding: 0;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n.nav{\n}\n\n.nav-img {\n\twidth: 35px;\n\tbackground-color: rgba(0,0,0,0.5);\n}\n\n.nav-link-home {\n\tposition: fixed;\n\ttop: 0px;\n\tright:0px;\n\tpadding-bottom: 15px;\n}\n\n.nav-link-settings {\n\tposition:fixed;\n\ttop: 0px;\n\tright: 0px;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tWEATHER MODULE\n*\n**********************************************************************/\n\n.weather-module {\n\twidth: 200px;\n\tbackground: rgba(0,0,0,0.5);\n\tposition: fixed;\n\ttop: 100px;\n}\n\n.weather-location{\n\tfont-size: 1.5em;\n}\n\n.temperature {\n\ttext-align: center;\n}\n\n.current-temperature {\n\tfont-size: 2.5em;\n\tcolor: #FFF;\n}\n\n.wunderground-api {\n\tmargin: auto;\n\ttext-align: center;\n}\n\n.wunderground_logo {\n\tclear: both;\n\twidth: 107px;\n}\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tTIME\n*\n**********************************************************************/\n\n.time-module {\n\tbackground: rgba(0,0,0,0.5);\n\tposition: fixed;\n\twidth: 200px;\n\ttop: 0px;\n\tmargin: auto;\n\ttext-align: center;\n}\n\n.time-time {\n\tfont-size: 2em;\n}\n\n.time-timezone{\n\n}\n\n.time-year {\n\n}\n\n.time-date {\n\n}\n\n.calendar {\n/*\tbackground: rgba(255,0,0,0.35);\n*/\twidth: 100%;\n\tfont-size: .75em;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\t\tNEWS\n*\n**********************************************************************/\n.news {\n\tposition: fixed;\n\tright: 0px;\n\ttop: 150px;\n\tbackground-color: rgba(0,0,0,0.5);\n\twidth: 400px;\n\theight: 440px;\n\toverflow: scroll;\n}\n\n.news a{\n\tcolor: #CC9;\n}\n\n.news a:visited {\n\tcolor: #FFF;\n}\n\n.nytimes {\n\theight: 40px;\n\tbackground-image: url(/assets/nyt-header.png);\n\tbackground-repeat: no-repeat;\n\tbackground-color: #000;\n\tcursor: pointer;\n}\n\n.article-title {\n\tfont-size: 1.2em;\n\tfont-weight: bold;\n\tcolor: #FFF;\n\tcursor: pointer;\n}\n\n.article{\n\tfont-size: .9em;\n\tcolor: #FFF;\n\tdisplay: none;\n}\n\n.snippet {\n\tmin-height: 76px;\n\tborder-bottom: 1px dotted #FFF;\n\tmargin-bottom: 8px;\n}\n\n.thumbnail {\n\tfloat: left;\n\twidth: 75px;\n\theight: 75px;\n}\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tNAVIGATION\n*\n**********************************************************************/\n\n\n/**********************************************************************\n*\n*  \t\t\t\t\t\tSETTINGS\n*\n**********************************************************************/\n\n.settings {\n\tbackground: rgba(0,0,0,0.5);\n\tposition: fixed;\n\ttop: 0px;\n\tright: 35px;\n\twidth: 600px;\n\ttext-align: center;\n\tdisplay:none;\n\tz-index: 100;\n}\n\n/*\n* \t\t\t\t\t\tChange Background\n*/\n\n.changeBackground {\n\ttext-align: center;\n}\n\n", ""]);
 
 	// exports
 
@@ -35977,32 +35977,32 @@
 			value: function getWeatherData() {
 
 				var geolookup = "http://api.wunderground.com/api/e82b459c85a499a5/geolookup/conditions/q/" + this.props.usState + "/" + this.props.city + ".json";
-				// $.ajax({
-				// 			url : geolookup,
-				//   	dataType : "jsonp",
-				//   	success : function(parsed_json) {
-				// 	  	var city = parsed_json['location']['city'];
-				// 	  	var state = parsed_json['location']['state'];
-				//   		var temp_f = parsed_json['current_observation']['temp_f'];
-				//   		var temp_c = parsed_json['current_observation']['temp_c'];
-				//   		var icon = parsed_json['current_observation']['icon'];
-				//   		var weather = parsed_json['current_observation']['weather'];
+				_jquery2.default.ajax({
+					url: geolookup,
+					dataType: "jsonp",
+					success: function (parsed_json) {
+						var city = parsed_json['location']['city'];
+						var state = parsed_json['location']['state'];
+						var temp_f = parsed_json['current_observation']['temp_f'];
+						var temp_c = parsed_json['current_observation']['temp_c'];
+						var icon = parsed_json['current_observation']['icon'];
+						var weather = parsed_json['current_observation']['weather'];
 
-				//   		icon = "http://icons.wxug.com/i/c/k/" + icon + ".gif";
+						icon = "http://icons.wxug.com/i/c/k/" + icon + ".gif";
 
-				// 		this.setState({
-				// 			city: city,
-				// 			state: state,
-				// 			weather: weather,
-				// 			icon: icon,
-				// 			temp_f: temp_f,
-				// 			temp_c: temp_c,
-				// 			temp_output: temp_f
-				// 		});
+						this.setState({
+							city: city,
+							state: state,
+							weather: weather,
+							icon: icon,
+							temp_f: temp_f,
+							temp_c: temp_c,
+							temp_output: temp_f
+						});
 
-				// 		this.chooseMetric();
-				// 	}.bind(this)
-				// });
+						this.chooseMetric();
+					}.bind(this)
+				});
 			}
 		}, {
 			key: 'chooseMetric',
@@ -36198,13 +36198,9 @@
 
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Background).call(this, props));
 
-			if (localStorage.getItem('background_img') == null) {
-				document.querySelector('body').style.background = "url('./assets/background.jpg')";
-			} else {
+			if (localStorage.getItem('background_img') !== null) {
 				document.querySelector('body').style.background = "url(" + localStorage.getItem("background_img") + ") fixed";
 			}
-			// document.querySelector('body').style.backgroundSize = "100vh";
-
 			return _this;
 		}
 
@@ -36762,6 +36758,7 @@
 				newsResult: []
 			};
 			_this.getNews = _this.getNews.bind(_this);
+			_this.nyTimes = _this.nyTimes.bind(_this);
 			return _this;
 		}
 
@@ -36783,6 +36780,11 @@
 				});
 			}
 		}, {
+			key: 'nyTimes',
+			value: function nyTimes() {
+				window.location.href = "http://developer.nytimes.com";
+			}
+		}, {
 			key: 'render',
 			value: function render() {
 				var articles = [];
@@ -36792,6 +36794,7 @@
 				return _react2.default.createElement(
 					'div',
 					{ className: 'news' },
+					_react2.default.createElement('h2', { className: 'nytimes', onClick: this.nyTimes }),
 					articles
 				);
 			}

@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 	background-image: url(/assets/nyt-header.png);
 	background-repeat: no-repeat;
 	background-color: #000;
-
+	cursor: pointer;
 }
 
 .article-title {

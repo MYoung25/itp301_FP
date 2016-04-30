@@ -17,6 +17,7 @@ class News extends Component {
 			newsResult: []
 		}
 		this.getNews = this.getNews.bind(this);
+		this.nyTimes = this.nyTimes.bind(this);
 	}
 	getNews(){
 		var apikey = "a620e8bff37d1173b6e6ed8712b999d4:1:75112088";
@@ -33,6 +34,9 @@ class News extends Component {
 			}.bind(this)
 		});
 	}
+	nyTimes(){
+		window.location.href="http://developer.nytimes.com";
+	}
 	render(){
 		var articles = [];
 		this.state.newsResult.forEach(function(news){
@@ -40,7 +44,7 @@ class News extends Component {
 		});
 		return(
 			<div className="news">
-				<h2 className="nytimes"></h2>
+				<h2 className="nytimes" onClick={this.nyTimes}></h2>
 				{articles}
 			</div>
 		);
