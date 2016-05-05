@@ -2,7 +2,6 @@
 // for each article returned fron the AJAX call
 
 import React, {Component} from 'react'
-import {Link} from 'react-router'
 import NewsArticle from './NewsArticle'
 import $ from 'jquery'
 
@@ -23,7 +22,6 @@ class News extends Component {
 		var apikey = "a620e8bff37d1173b6e6ed8712b999d4:1:75112088";
 		var section = "home";
 		var newsLookup = "http://api.nytimes.com/svc/topstories/v1/" + section + ".json?api-key=" + apikey;
-		console.log(newsLookup);
 		$.ajax({
   			url : newsLookup,
   			type : "GET",

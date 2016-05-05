@@ -1,7 +1,6 @@
 // This houses each component that changes settings of another component
 
 import React, {Component} from 'react'
-import { Link } from 'react-router'
 import Background from './Background.js'
 import WeatherType from './Settings/WeatherType'
 

@@ -1,7 +1,6 @@
 // Michael, you should probably fix this
 
 import React, {Component} from 'react'
-import {Link} from 'react-router'
 import $ from 'jquery'
 
 class Weather extends Component{
@@ -39,25 +38,36 @@ class Weather extends Component{
   			url : geolookup,
 		  	dataType : "jsonp",
 		  	success : function(parsed_json) {
-			  	var city = parsed_json['location']['city'];
-			  	var state = parsed_json['location']['state'];
-		  		var temp_f = parsed_json['current_observation']['temp_f'];
-		  		var temp_c = parsed_json['current_observation']['temp_c'];
-		  		var icon = parsed_json['current_observation']['icon'];
-		  		var weather = parsed_json['current_observation']['weather'];
+		  		if(parsed_json.location != undefined){
+			  		var city = parsed_json['location']['city'];
+				  	var state = parsed_json['location']['state'];
+			  		var temp_f = parsed_json['current_observation']['temp_f'];
+			  		var temp_c = parsed_json['current_observation']['temp_c'];
+			  		var icon = parsed_json['current_observation']['icon'];
+			  		var weather = parsed_json['current_observation']['weather'];
 
-		  		icon = "http://icons.wxug.com/i/c/k/" + icon + ".gif";
-				
-				this.setState({
-					city: city,
-					state: state,
-					weather: weather,
-					icon: icon,
-					temp_f: temp_f,
-					temp_c: temp_c,
-					temp_output: temp_f
-				});
+			  		icon = "http://icons.wxug.com/i/c/k/" + icon + ".gif";
 
+					this.setState({
+						city: city,
+						state: state,
+						weather: weather,
+						icon: icon,
+						temp_f: temp_f,
+						temp_c: temp_c,
+						temp_output: temp_f
+					});
+				} else {
+					this.setState({
+		  				city: "Invalid",
+		  				state: "Input",
+		  				metric: "",
+		  				temp_f: "",
+		  				temp_c: "",
+		  				temp_output: "",
+		  				icon: ""
+		  			});
+				}
 				this.chooseMetric();
 			}.bind(this)
 		});

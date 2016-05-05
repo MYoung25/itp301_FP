@@ -12,8 +12,20 @@ class WeatherType extends Component {
 		this.props.changeMetricType(event.target.value);
 	}
 	setLocation(){
-		this.props.changeCity(document.querySelector('.select-city').value);
-		this.props.changeUsState(document.querySelector('.select-state').value);
+		// get the value of the city input
+		var city = document.querySelector('.select-city').value.trim();
+		//if city input is empty, set weather city to invalid and state to input
+		if(city.length == 0){
+			this.props.changeCity('Invalid');
+			this.props.changeUsState('Input')
+		} else {
+			// if city input isnt empty, replace any spaces with underscores
+			city = city.replace(/([^a-z\s]|_)/gi, "");
+
+			this.props.changeCity(city);
+			this.props.changeUsState(document.querySelector('.select-state').value);
+		}
+
 	}
 	render(){
 		return(

@@ -1,7 +1,6 @@
 // This is the component that produces each of the articles
 
 import React, {Component} from 'react'
-import {Link} from 'react-router'
 
 class NewsArticle extends Component {
 	constructor (props) {

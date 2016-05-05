@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import { Link } from 'react-router'
 import $ from 'jquery'
 
 
@@ -10,9 +9,6 @@ class Background extends Component{
 			document.querySelector('body').style.background = "url(" + localStorage.getItem("background_img") + ") fixed";
 		}
 	}
-
-
-
 	render() {
 		return (
 			<div className="changeBackground">

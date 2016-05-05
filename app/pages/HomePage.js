@@ -1,7 +1,5 @@
 // import the required dependencies from package.json
 import React, {Component} from 'react'
-import { Link } from 'react-router'
-import $ from 'jquery'
 // import the components that go into this page
 import Weather from '../components/Weather'
 import Settings from '../components/Settings'
