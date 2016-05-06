@@ -20,7 +20,7 @@ class WeatherType extends Component {
 			this.props.changeUsState('Input')
 		} else {
 			// if city input isnt empty, replace any spaces with underscores
-			city = city.replace(/([^a-z\s]|_)/gi, "");
+			city = city.replace(/([^a-z\s]|_)/gi, "").trim();
 
 			this.props.changeCity(city);
 			this.props.changeUsState(document.querySelector('.select-state').value);

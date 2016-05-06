@@ -6,7 +6,7 @@ class Background extends Component{
 	constructor (props){
 		super(props);
 		if(localStorage.getItem('background_img') !== null){
-			document.querySelector('body').style.background = "url(" + localStorage.getItem("background_img") + ") fixed";
+			document.querySelector('body').style.background = "url(" + localStorage.getItem("background_img") + ") cover";
 		}
 	}
 	render() {
