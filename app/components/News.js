@@ -1,5 +1,5 @@
 // This produces the news component, makes the AJAX call and then produces NewsArticle components
-// for each article returned fron the AJAX call
+// for each article returned fron the AJAX call, as well as a slideIn/Out animation
 
 import React, {Component} from 'react'
 import NewsArticle from './NewsArticle'
